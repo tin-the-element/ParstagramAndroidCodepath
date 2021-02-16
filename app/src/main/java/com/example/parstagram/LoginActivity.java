@@ -58,7 +58,9 @@ public class LoginActivity extends AppCompatActivity {
                 user.setPassword(etPassword.getText().toString());
                 // Set custom properties
                 // Invoke signUpInBackground
+                Log.i(TAG, "Attempting to Signup User");
                 user.signUpInBackground(new SignUpCallback() {
+
                     public void done(ParseException e) {
                         if (e == null) {
                             // Hooray! Let them use the app now.
